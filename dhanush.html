@@ -1,0 +1,135 @@
+<html>
+<head>
+    <title>Calculator</title>
+<style>
+    *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: serif;
+	outline: none;
+    background-color: #b3aa68a3;
+}
+.container{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.calculator{
+	padding: 15px;
+	border-radius: 30px;
+	box-shadow: insect 5px 5px 12px #f5353500,
+	                   5px 5px 12px rgba(0, 0, 0, 0);
+	display: grid;	
+	grid-template-columns: repeat(4,68px);	
+    outline: auto;		   			
+}
+input{
+	grid-column: span 4;
+	height: 70px;
+	width: 260px;
+	background-color: #f0eef356;
+	box-shadow: inset -5px -5px 12px #ffffff,
+	            inset 5px 5px 12px rgba(0,0,0,.16);
+	border: solid;
+	border-radius: 30px;
+	color: rgb(243, 253, 253);
+	font-size: 50px;
+	text-align: end;
+	margin: auto;
+	margin-top: 40px;
+	margin-bottom: 30px;		
+	padding: 20px;	
+}
+button{
+	height: 40px;
+	width: 48px;
+	background-color: #2fe1ee7c;
+	box-shadow: -5px -5px 12px #d4e2eb,
+	                5px 5px 12px rgba(0,0,0,.7);
+	border:solid;
+	border-radius: 50px;
+	margin: 8px;
+	font-size: 16px;				
+}
+.equal{
+	width: 115px;
+	border-radius: 40px;
+    background-color: #ecf0f3;
+	box-shadow: -5px -5px 12px #4ed6ee,
+	                5px 5px 12px rgba(61, 198, 216, 0.16);
+}
+.paragraph{
+    padding: 2%;
+}
+</style>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+    <h1 align="center">Calculator</h1><br>
+    <div class="paragraph"><p>&nbsp;&nbsp;An electronic calculator is typically a portable electronic device used to perform calculations. Basic calculators can do only addition, subtraction, multiplication and division mathematical calculations. </p>
+    <br>
+    <br>
+    <h1>Invention of Calculator
+        Father of Calculator: Blaise Pascal
+        </h1>
+        <p>A French Mathematician and Physicist, Blaise Pascal invented mechanical calculators in 1642. It was called Pascaline also called Arithmetic Machine. The Pascal calculator is designed between 1642 to 1644.
+        </p>
+    </div>
+     <img src="data:image/jpeg;base64,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" align="right" height="400" width="600">
+    <div class="container">
+        <div class="calculator">
+            <input type="text" placeholder="0"id="output-screen">
+            <button onclick="Clear()">Cl</button>
+            <button onclick="del()">DEL</button>
+            <button onclick="display('%')">%</button>
+            <button onclick="display('/')">/</button>
+            <button onclick="display('7')">7</button>
+            <button onclick="display('8')">8</button>
+            <button onclick="display('9')">9</button>
+            <button onclick="display('*')">*</button>
+            <button onclick="display('4')">4</button>
+            <button onclick="display('5')">5</button>
+            <button onclick="display('6')">6</button>
+            <button onclick="display('-')">-</button>
+            <button onclick="display('1')">1</button>
+            <button onclick="display('2')">2</button>
+            <button onclick="display('3')">3</button>
+            <button onclick="display('+')">+</button>
+            <button onclick="display('-')">-</button>
+            <button onclick="display('0')">0</button>
+            <button onclick="Calculate()" class="equal">=</button>
+        </div>
+    
+    </div>
+
+    <script>
+        let outputScreen = document.getElementById("output-screen");
+
+
+        function display(num){
+            outputScreen.value += num;
+        }
+        function Calculate(){
+            try{
+                outputScreen.value=eval(outputScreen.value);
+            }
+            catch(err){
+                alert("invalid")
+            }
+        }
+        function Clear(){
+            outputScreen.value=" ";
+        }
+        function del(){
+            outputScreen.value=outputScreen.value.slice(0,-1);
+        }
+    </script>
+
+<p><h3 align="center">Thank for visit my website!!!</h3>
+    <h4 align="right">contant us:<a href="#email">dhanushravi@gmail.com</a></h4></p>
+</body>
+
+</html>

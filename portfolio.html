@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital portfolio</title>
+    <style>
+        /* Add your custom styles here */
+
+body {
+    /* background-image: url("https://tailwindcss.com/_next/static/media/docs@tinypng.d9e4dcdc.png"); */
+    font-family:'Times New Roman', Times, serif;
+    margin: 0;
+    background-color: #b3aa68a3;
+    padding: 0;
+}
+
+header, nav, section, footer {
+    padding: 20px;
+    border: 4px dotted black;
+}
+
+header {
+     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdgfKQoNgbv6J5sYVEtfVkQL1c-648PctKZ-5voCf7d_R94ht6Vz4_nRGHpmY73IZWPQE&usqp=CAU");
+    color: #fff;
+    text-align: center;
+}
+
+img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.img-contact{ 
+    width: 50px;
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 2px;
+    text-align: center;
+}
+
+nav ul :hover {
+    list-style: none;
+    padding: 2px;
+    font-weight: 600;
+    color:#1792f7;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.project {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="dhanush_profile.jpg">
+        <h1>DHANUSH.R</h1>
+        <p>Web Developer</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p><h3>Hello!. I'm <b>Dhanush.R</b> from Government arts college. I'll finish my degree of B.Sc Computer Science.<br>
+            I am a keen, hard workinng, reliable and excellent time keeper.
+            <br>I am a bright and receptive person, able to 
+            communicate well with people at all levels. I am good at working using my own initiative and I am flexible in 
+            my approach to work duties. 
+            <br>I have a good sense of humour and a pleasant approact.</h3>
+        
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project : <a href="dhanush.html" target="_blank">Calculator</a></h3>
+            <img src="https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2015/02/thumb_720_450_1411_f.jpg" align="margin" width="150" height="150">
+            <p>Its my first project using html, css and javascript.<br>
+                An electronic calculator is typically a portable electronic device used to perform calculations.
+           
+            </p>
+        </div>
+        <!-- Add more project divs as needed -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="contactForm">
+            <table><tr><td><label for="name">Name:</label></td>
+            <td><input type="text" id="name" name="name" required></td> </tr>
+            <tr><td><label for="email">Email:</label></td>
+                <td> <input type="email" id="email" name="email" required></td> </tr>
+                <tr><td> <label for="message">Message:</label></td>
+                    <td> <textarea id="message" name="message" rows="4" required></textarea></td> </tr>  
+    <tr colspan="2"><td> <input type="submit" value="Submit"></td></tr>
+               </table>   
+        </form>
+        <br>
+        <br>
+           <a href="https://www.instagram.com/crazy_boy_004_/?igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank"><img class="img-contact" src="https://cdn1.iconfinder.com/data/icons/social-circle-3/32/instagram_circle-64.png" width="30" height="30"></a>
+           <a href="https://www.facebook.com/people/Dhanush-R/pfbid03Bi2YsQNVyDg4xqgmaUJq3GJ7usjsiLMH7KcocAdYfYFkU3VdZKKDrfhoRAdSaXdl/?mibextid=ZbWKwL" target="_blank"> &nbsp;&nbsp;&nbsp;<img class="img-contact" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-facebook_-64.png" width="30" height="30"></a>
+          
+    </section>
+
+    <footer>
+        <p>&copy; 2023 dhanushportfolio</p>
+       
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                var name = document.getElementById('name').value;
+                var email = document.getElementById('email').value;
+                var message = document.getElementById('message').value;
+
+                if (name === '' || email === '' || message === '') {
+                    alert('Please fill out all fields.');
+                    return;
+                }
+
+                alert('Form submitted!\nName: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
+            });
+        });
+    </script>
+</body>
+</html>
